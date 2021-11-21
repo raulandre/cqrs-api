@@ -1,8 +1,8 @@
 ﻿namespace Todo.Domain.Entities;
 
-internal class Todo : Entity
+internal class TodoItem : Entity
 {
-    public Todo(string title, DateTime date, string user)
+    public TodoItem(string title, DateTime date, string user)
     {
         Title = title;
         Date = date;

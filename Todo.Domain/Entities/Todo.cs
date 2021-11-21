@@ -5,7 +5,6 @@ internal class Todo : Entity
     public Todo(string title, DateTime date, string user)
     {
         Title = title;
-        Done = false;
         Date = date;
         User = user;
     }

@@ -4,7 +4,7 @@ using Todo.Domain.Commands.Contracts;
 
 namespace Todo.Domain.Commands;
 
-internal class UpdateTodoCommand : Notifiable<Notification>, ICommand
+public class UpdateTodoCommand : Notifiable<Notification>, ICommand
 {
     public UpdateTodoCommand()
     {

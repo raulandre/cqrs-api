@@ -4,7 +4,7 @@ using Todo.Domain.Commands.Contracts;
 
 namespace Todo.Domain.Commands;
 
-internal class CreateTodoCommand : Notifiable<Notification>, ICommand
+public class CreateTodoCommand : Notifiable<Notification>, ICommand
 {
     public CreateTodoCommand()
     {
@@ -33,7 +33,6 @@ internal class CreateTodoCommand : Notifiable<Notification>, ICommand
                 .IsNotNull(Date, "Date", "Date cannot be null.")
                 .IsGreaterOrEqualsThan(Title.Length, 3, "Title", "Title must contain three or more characters.")
                 .IsGreaterOrEqualsThan(User.Length, 6, "User", "User must contain six or more characters.")
-                .IsGreaterOrEqualsThan(Date, DateTime.Now, "Date", "Date must be now or future.")
             );
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Todo.Domain.Entities;
 
-internal abstract class Entity : IEquatable<Entity>
+public abstract class Entity : IEquatable<Entity>
 {
     public Guid Id { get; private set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace Todo.Domain.Entities;
 
-internal class TodoItem : Entity
+public class TodoItem : Entity
 {
     public TodoItem(string title, DateTime date, string user)
     {

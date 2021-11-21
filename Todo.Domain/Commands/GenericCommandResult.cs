@@ -2,7 +2,7 @@
 
 namespace Todo.Domain.Commands;
 
-internal class GenericCommandResult : ICommandResult
+public class GenericCommandResult : ICommandResult
 {
     public GenericCommandResult()
     {

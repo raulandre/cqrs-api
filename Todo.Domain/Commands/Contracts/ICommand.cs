@@ -1,6 +1,6 @@
 ﻿namespace Todo.Domain.Commands.Contracts;
 
-internal interface ICommand
+public interface ICommand
 {
     void Validate();
 }

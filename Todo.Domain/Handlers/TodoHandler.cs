@@ -6,7 +6,7 @@ using Todo.Domain.Repositories;
 
 namespace Todo.Domain.Handlers;
 
-internal class TodoHandler : IHandler<CreateTodoCommand>
+public class TodoHandler : IHandler<CreateTodoCommand>
 {
 
     private readonly ITodoRepository _repository;

@@ -4,6 +4,17 @@
     <ProjectReference Include="..\Todo.Domain\Todo.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.entityframeworkcore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.entityframeworkcore.Design" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.entityframeworkcore.InMemory" Version="6.0.0" />
+    <PackageReference Include="microsoft.entityframeworkcore.relational" Version="6.0.0" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="6.0.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

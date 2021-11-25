@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Todo.Domain.Entities;
 using Todo.Domain.Repositories;
 
@@ -11,7 +12,27 @@ public class FakeTodoRepository : ITodoRepository
         
     }
 
+    public IEnumerable<TodoItem>? GetAll(string user)
+    {
+        return null;
+    }
+
+    public IEnumerable<TodoItem>? GetAllDone(string user)
+    {
+        return null;
+    }
+
+    public IEnumerable<TodoItem>? GetAllUndone(string user)
+    {
+        return null;
+    }
+
     public TodoItem? GetById(Guid id, string user)
+    {
+        return null;
+    }
+
+    public IEnumerable<TodoItem>? GetFromPeriod(string user, DateTime date, bool done)
     {
         return null;
     }

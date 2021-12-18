@@ -6,6 +6,7 @@ public interface ITodoRepository
 {
     void Add(TodoItem item);
     void Update(TodoItem item);
+    void Delete(TodoItem item);
     TodoItem? GetById(Guid id, string user);
     IEnumerable<TodoItem>? GetAll(string user);
     IEnumerable<TodoItem>? GetAllDone(string user);

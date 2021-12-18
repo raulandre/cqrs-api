@@ -22,6 +22,12 @@ public class TodoRepository : ITodoRepository
         _context.SaveChanges();
     }
 
+    public void Delete(TodoItem item)
+    {
+        _context.Remove(item);
+        _context.SaveChanges();
+    }
+
     public IEnumerable<TodoItem>? GetAll(string user)
     {
         return _context.Todos?.AsNoTracking()

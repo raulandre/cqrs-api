@@ -89,4 +89,15 @@ public class TodoController : ControllerBase
         command.User = "username";
         return (GenericCommandResult)handler.Handle(command);
     }
+
+    [HttpDelete("{id}")]
+    public GenericCommandResult Delete(
+        string id,
+        [FromServices] TodoHandler handler
+    )
+    {
+        var command = new DeleteTodoCommand(id);
+        command.User = "username";
+        return (GenericCommandResult)handler.Handle(command);
+    }
 }

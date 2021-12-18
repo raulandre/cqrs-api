@@ -64,4 +64,20 @@ public class TodoHandler :
         _repository.Update(todo);
         return new GenericCommandResult(true, "Todo updated successfully!", todo);
     }
+
+    public ICommandResult Handle(DeleteTodoCommand command)
+    {
+        command.Validate();
+        if(!command.IsValid)
+            return new GenericCommandResult(false, "Please make sure all fields are valid!", command.Notifications);
+
+        var id = Guid.Parse(command.Id);
+        var todo = _repository.GetById(id, command.User);
+
+        if(todo is null)
+            return new GenericCommandResult(false, "Todo not found!", command.Notifications);
+
+        _repository.Delete(todo);
+        return new GenericCommandResult(true, "Todo deleted successfully!", todo);
+    }
 }

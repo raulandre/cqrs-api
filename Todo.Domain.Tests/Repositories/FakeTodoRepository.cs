@@ -12,6 +12,11 @@ public class FakeTodoRepository : ITodoRepository
         
     }
 
+    public void Delete(TodoItem item)
+    {
+        
+    }
+
     public IEnumerable<TodoItem>? GetAll(string user)
     {
         return null;
